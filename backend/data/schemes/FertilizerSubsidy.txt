@@ -1,0 +1,39 @@
+SCHEME: Fertilizer Subsidy Scheme
+TYPE: Input Subsidy
+MINISTRY: Ministry of Chemicals & Fertilizers
+LAUNCH YEAR: Ongoing (DBT reforms from 2016)
+
+DESCRIPTION:
+The Government of India provides fertilizer subsidies to ensure affordable access to fertilizers like urea, DAP (Di-Ammonium Phosphate), MOP (Muriate of Potash), and complex fertilizers. Subsidies are provided through Direct Benefit Transfer (DBT) and point-of-sale machines at retail outlets. Properly balanced fertilization is critical for disease prevention.
+
+BENEFITS:
+- Urea: maximum retail price fixed at INR 242 per 45 kg bag (heavily subsidized from actual cost of INR 1,400+)
+- DAP: subsidized at INR 1,350 per bag (actual cost INR 4,000+)
+- MOP: subsidized price for potassium fertilizer
+- Nutrient-Based Subsidy (NBS) for P and K fertilizers
+- DBT through PoS machine at fertilizer retailer using Aadhaar authentication
+- Micro-nutrient supplements (zinc, boron, iron) subsidized under NBS
+
+ELIGIBILITY:
+- All registered farmers are eligible
+- Purchase recorded through Aadhaar-authenticated PoS system
+- No minimum or maximum purchase limit for individual farmers
+
+HOW TO ACCESS:
+1. Visit registered fertilizer dealer/retailer
+2. Authenticate using Aadhaar biometric or OTP at PoS machine
+3. Purchase fertilizer at subsidized MRP
+4. Transaction logged in Meri Fasal Mera Byora or DBT portal
+
+DISEASE PREVENTION CONNECTION:
+- Balanced NPK prevents nutrient deficiency diseases (yellowing, tip burn, scorching)
+- Excess nitrogen increases susceptibility to fungal diseases like blast and blight
+- Potassium (K) improves plant immunity and disease resistance
+- Soil Health Card + Fertilizer Subsidy together reduce disease risk
+
+BEST SUITED FOR:
+- Farmers facing nutrient deficiency symptoms alongside disease
+- Farmers spending high amounts on commercial fertilizers
+- Farmers in areas with repeated crop health issues
+
+KEYWORDS: fertilizer, urea, DAP, potash, subsidy, nutrient, NPK, micronutrient, soil nutrition, input subsidy, aadhaar, DBT

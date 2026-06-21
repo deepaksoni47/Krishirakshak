@@ -1,0 +1,178 @@
+{
+  "Brown Spot": {
+    "treatment": "Apply Mancozeb or Propiconazole fungicide at recommended dosage. Remove and destroy heavily infected leaves to prevent spore spread.",
+    "preventive_actions": [
+      "Improve field drainage to reduce humidity",
+      "Avoid excessive nitrogen fertilizer",
+      "Use disease-resistant varieties in next season"
+    ],
+    "estimated_cost": 400,
+    "recovery_days": 7,
+    "chemical": "Mancozeb 75% WP @ 2g/L or Propiconazole 25% EC @ 1ml/L"
+  },
+  "Leaf Blast": {
+    "treatment": "Apply Tricyclazole or Isoprothiolane fungicide immediately. Blast spreads rapidly — act within 24 hours of detection.",
+    "preventive_actions": [
+      "Avoid overhead irrigation",
+      "Balance nitrogen application",
+      "Drain flooded fields immediately"
+    ],
+    "estimated_cost": 600,
+    "recovery_days": 10,
+    "chemical": "Tricyclazole 75% WP @ 0.6g/L or Isoprothiolane 40% EC @ 1.5ml/L"
+  },
+  "Neck Blast": {
+    "treatment": "Apply Tricyclazole at panicle initiation stage. This is a critical stage — neck blast can cause complete yield loss.",
+    "preventive_actions": [
+      "Apply preventive fungicide at boot stage",
+      "Avoid water stress during heading",
+      "Monitor fields daily during flowering"
+    ],
+    "estimated_cost": 750,
+    "recovery_days": 14,
+    "chemical": "Tricyclazole 75% WP @ 0.6g/L at boot and heading stages"
+  },
+  "Bacterial Leaf Blight": {
+    "treatment": "Apply Copper Oxychloride or Streptocycline. Drain excess water from fields to reduce bacterial spread.",
+    "preventive_actions": [
+      "Avoid excess nitrogen during vegetative stage",
+      "Drain standing water immediately",
+      "Use certified disease-free seeds"
+    ],
+    "estimated_cost": 350,
+    "recovery_days": 12,
+    "chemical": "Copper Oxychloride 50% WP @ 3g/L + Streptocycline 0.3g/L"
+  },
+  "Sheath Blight": {
+    "treatment": "Apply Hexaconazole or Validamycin fungicide. Focus on the lower sheath region near the waterline.",
+    "preventive_actions": [
+      "Reduce planting density to improve air circulation",
+      "Avoid waterlogging",
+      "Remove crop debris post-harvest"
+    ],
+    "estimated_cost": 500,
+    "recovery_days": 10,
+    "chemical": "Hexaconazole 5% EC @ 2ml/L or Validamycin 3% L @ 2ml/L"
+  },
+  "Early Blight": {
+    "treatment": "Apply Chlorothalonil or Mancozeb fungicide. Remove lower infected leaves. Ensure good air circulation around plants.",
+    "preventive_actions": [
+      "Avoid overhead watering",
+      "Rotate crops annually",
+      "Apply mulch to reduce soil splash"
+    ],
+    "estimated_cost": 300,
+    "recovery_days": 8,
+    "chemical": "Chlorothalonil 75% WP @ 2g/L or Mancozeb 75% WP @ 2g/L"
+  },
+  "Late Blight": {
+    "treatment": "Apply Metalaxyl + Mancozeb immediately. Late blight is aggressive — destroy severely infected plants to prevent spread.",
+    "preventive_actions": [
+      "Remove infected plant debris",
+      "Avoid dense planting",
+      "Apply protective fungicide before monsoon season"
+    ],
+    "estimated_cost": 800,
+    "recovery_days": 14,
+    "chemical": "Metalaxyl 8% + Mancozeb 64% WP @ 2.5g/L"
+  },
+  "Powdery Mildew": {
+    "treatment": "Apply Sulphur-based fungicide or Triadimefon. Clean infected areas thoroughly before spraying.",
+    "preventive_actions": [
+      "Improve ventilation and sunlight penetration",
+      "Avoid excess nitrogen fertilization",
+      "Spray Neem oil as preventive measure"
+    ],
+    "estimated_cost": 250,
+    "recovery_days": 6,
+    "chemical": "Wettable Sulphur 80% WP @ 3g/L or Triadimefon 25% WP @ 1g/L"
+  },
+  "Downy Mildew": {
+    "treatment": "Apply Cymoxanil + Mancozeb or Metalaxyl. Downy mildew thrives in cool, wet conditions — prioritize drainage.",
+    "preventive_actions": [
+      "Avoid over-irrigation",
+      "Use disease-free transplants",
+      "Apply preventive copper spray before rains"
+    ],
+    "estimated_cost": 450,
+    "recovery_days": 9,
+    "chemical": "Cymoxanil 8% + Mancozeb 64% WP @ 2.5g/L"
+  },
+  "Anthracnose": {
+    "treatment": "Apply Carbendazim or Thiophanate-methyl fungicide. Remove mummified fruits and infected plant debris.",
+    "preventive_actions": [
+      "Harvest at optimal maturity to reduce infection",
+      "Avoid injury to fruits during harvesting",
+      "Use hot water seed treatment before planting"
+    ],
+    "estimated_cost": 380,
+    "recovery_days": 8,
+    "chemical": "Carbendazim 50% WP @ 1g/L or Thiophanate-methyl 70% WP @ 1g/L"
+  },
+  "Rust": {
+    "treatment": "Apply Propiconazole or Tebuconazole fungicide. Rust spreads through wind — act quickly before spore release.",
+    "preventive_actions": [
+      "Plant resistant varieties",
+      "Scout fields regularly during cool, wet periods",
+      "Maintain proper plant spacing"
+    ],
+    "estimated_cost": 420,
+    "recovery_days": 10,
+    "chemical": "Propiconazole 25% EC @ 1ml/L or Tebuconazole 25.9% EC @ 1ml/L"
+  },
+  "Wilt": {
+    "treatment": "Apply Carbendazim drenching at the base of plants. Wilted plants may not recover — remove and destroy severely affected ones.",
+    "preventive_actions": [
+      "Use disease-free planting material",
+      "Practice crop rotation with non-host crops",
+      "Avoid waterlogging to prevent soil pathogen buildup"
+    ],
+    "estimated_cost": 550,
+    "recovery_days": 15,
+    "chemical": "Carbendazim 50% WP @ 2g/L soil drench at base"
+  },
+  "Yellow Mosaic Virus": {
+    "treatment": "No direct cure exists. Remove and destroy infected plants immediately. Control whitefly vectors with Imidacloprid.",
+    "preventive_actions": [
+      "Control whitefly population using sticky traps",
+      "Use virus-free certified seeds",
+      "Plant barrier crops like sorghum around the field"
+    ],
+    "estimated_cost": 300,
+    "recovery_days": 21,
+    "chemical": "Imidacloprid 17.8% SL @ 0.5ml/L for vector control"
+  },
+  "Stem Rot": {
+    "treatment": "Apply Carbendazim or Propiconazole. Drain waterlogged fields immediately as stem rot is favored by standing water.",
+    "preventive_actions": [
+      "Avoid excessive nitrogen fertilization",
+      "Improve field drainage",
+      "Use silicon-based fertilizers to strengthen stem tissue"
+    ],
+    "estimated_cost": 480,
+    "recovery_days": 12,
+    "chemical": "Carbendazim 50% WP @ 1g/L or Propiconazole 25% EC @ 1ml/L"
+  },
+  "Leaf Scorch": {
+    "treatment": "Apply foliar micronutrient spray (Zinc + Boron). Leaf scorch is often linked to nutritional stress or drought.",
+    "preventive_actions": [
+      "Ensure proper irrigation schedule",
+      "Apply balanced fertilizer with micronutrients",
+      "Mulch around plant base to retain moisture"
+    ],
+    "estimated_cost": 200,
+    "recovery_days": 5,
+    "chemical": "Zinc Sulphate @ 0.5% + Boric acid @ 0.1% foliar spray"
+  },
+  "default": {
+    "treatment": "Consult local agricultural extension officer for precise diagnosis. Apply broad-spectrum fungicide as precautionary measure.",
+    "preventive_actions": [
+      "Isolate affected plants from healthy crops",
+      "Improve general crop hygiene and sanitation",
+      "Collect samples for laboratory testing"
+    ],
+    "estimated_cost": 350,
+    "recovery_days": 10,
+    "chemical": "Mancozeb 75% WP @ 2g/L as broad-spectrum protective fungicide"
+  }
+}

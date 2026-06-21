@@ -1,0 +1,40 @@
+SCHEME: Soil Health Card Scheme
+TYPE: Soil Testing & Fertilizer Management
+MINISTRY: Ministry of Agriculture & Farmers Welfare
+LAUNCH YEAR: 2015
+
+DESCRIPTION:
+The Soil Health Card (SHC) scheme provides every farmer a Soil Health Card every two years that carries crop-wise recommendations for nutrients and fertilizers required for individual farms to help improve productivity through judicious use of inputs. The scheme covers macro and micro nutrients to improve soil health and reduce input costs.
+
+BENEFITS:
+- Free soil testing for 12 key parameters (N, P, K, pH, EC, OC, S, Zn, Fe, Cu, Mn, B)
+- Crop-specific fertilizer recommendations tailored to your soil type
+- Reduces over-use of chemical fertilizers → lower input costs
+- Improves crop yield and quality
+- Online portal for tracking soil health over seasons
+- Supports transition to organic farming
+- Reduces disease susceptibility through balanced soil nutrition
+
+ELIGIBILITY:
+- All farmers across India are eligible
+- No land ownership minimum; tenant farmers and sharecroppers included
+- Free of cost for all categories of farmers
+
+APPLICATION PROCESS:
+1. Contact the local Krishi Vigyan Kendra (KVK) or Agriculture Department office
+2. Register and submit a soil sample from your field (instructions provided)
+3. Soil analyzed at government laboratories within 3 weeks
+4. Soil Health Card delivered with nutrient status and fertilizer recommendations
+5. Follow recommendations to improve soil health and reduce disease risk
+6. Card renewed every 2 years
+
+ONLINE ACCESS:
+- Portal: soilhealth.dac.gov.in
+- Download e-SHC from the portal using Aadhaar/registration number
+
+BEST SUITED FOR:
+- Farmers with repeated crop disease issues (poor soil can increase disease susceptibility)
+- Farmers spending high amounts on fertilizers
+- Farmers growing rice, wheat, vegetables, or horticultural crops
+
+KEYWORDS: soil, soil health, nutrients, fertilizer, NPK, micronutrients, crop yield, disease resistance, soil testing

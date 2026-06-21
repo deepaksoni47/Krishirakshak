@@ -1,0 +1,40 @@
+SCHEME: Pradhan Mantri Krishi Sinchai Yojana (PMKSY)
+TYPE: Irrigation & Water Management
+MINISTRY: Ministry of Jal Shakti / Ministry of Agriculture
+LAUNCH YEAR: 2015
+
+DESCRIPTION:
+PMKSY aims to achieve "Har Khet Ko Pani" (water to every field) and "More Crop Per Drop" through convergence of irrigation investments, increase in cultivated area under irrigation, improve on-farm water use efficiency, introduce sustainable water conservation practices, and create water sources at micro level. The scheme promotes micro-irrigation (drip and sprinkler systems).
+
+BENEFITS:
+- Subsidy on drip irrigation systems: up to 55% for general farmers, 65% for SC/ST and small/marginal farmers
+- Subsidy on sprinkler irrigation systems: up to 50% for general, 60% for small/marginal farmers
+- Per drop more crop: micro-irrigation conserves water and improves yields
+- Reduces humidity stress on crops (high humidity causes fungal diseases)
+- Watershed development funding for drought-prone areas
+- AIBP (Accelerated Irrigation Benefit Programme) funding for incomplete major/medium projects
+
+ELIGIBILITY:
+- All categories of farmers are eligible
+- Priority given to small and marginal farmers (land up to 2 hectares)
+- SC/ST farmers get higher subsidy rates
+- Farmers in drought-prone or water-scarce districts get priority
+
+APPLICATION PROCESS:
+1. Register on state agriculture department portal or visit local agriculture office
+2. Submit land records, Aadhaar, bank account details
+3. Get soil testing done for suitable micro-irrigation system recommendation
+4. Install drip/sprinkler system through empanelled vendors
+5. Claim subsidy post-installation inspection by district agriculture officer
+
+BENEFIT FOR DISEASE MANAGEMENT:
+- Proper irrigation reduces humidity around leaves → fewer fungal diseases
+- Drip irrigation avoids wetting leaves → prevents Brown Spot, Leaf Blast, Blight
+- Water stress reduction improves crop immunity and recovery from disease
+
+BEST SUITED FOR:
+- Farmers in areas with water scarcity or irregular rainfall
+- Farmers growing rain-sensitive crops (rice, wheat, vegetables)
+- Farmers experiencing weather-related crop disease from humidity
+
+KEYWORDS: irrigation, drip, sprinkler, water, humidity, rainfall, drought, moisture, water scarcity, crop protection

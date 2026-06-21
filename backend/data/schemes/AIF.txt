@@ -1,0 +1,37 @@
+SCHEME: Agricultural Infrastructure Fund (AIF)
+TYPE: Post-Harvest Infrastructure & Finance
+MINISTRY: Ministry of Agriculture & Farmers Welfare
+LAUNCH YEAR: 2020
+
+DESCRIPTION:
+The Agriculture Infrastructure Fund (AIF) provides medium-long term debt financing facility for investment in viable projects for post-harvest management infrastructure and community farming assets. Beneficiaries get loans at subsidized interest rates with 3% interest subvention per annum.
+
+BENEFITS:
+- Loans up to INR 2 crore for individuals, up to INR 2 crore per project for cooperatives
+- 3% interest subvention on loan amount (effectively 4-7% interest rate)
+- Credit guarantee coverage under CGTMSE for loans up to INR 2 crore
+- Can be used for: cold storage, custom hiring centres, primary processing units, sorting/grading units, drying units
+- 4 years moratorium on principal repayment
+- Flexibility to repay over 7 years
+
+ELIGIBILITY:
+- Primary Agricultural Credit Societies (PACS)
+- Marketing Cooperative Societies
+- Farmer Producer Organizations (FPOs)
+- Self Help Groups (SHGs)
+- Farmers, joint liability groups
+- Multipurpose Cooperative Societies
+- Agri-entrepreneurs, startups, and central/state agencies
+
+APPLICATION PROCESS:
+1. Apply at agriinfra.dac.gov.in portal
+2. Submit project proposal, business plan, land documents, and financial projections
+3. Bank evaluates viability and disburses loan
+4. Interest subvention credited to loan account automatically
+
+BEST SUITED FOR:
+- Farmer groups needing cold storage after disease losses to prevent further spoilage
+- FPOs wanting to set up primary processing units
+- Farmers wanting to invest in crop drying units to reduce post-harvest losses
+
+KEYWORDS: infrastructure, storage, cold chain, post-harvest, loan, interest subvention, FPO, cooperative, processing unit

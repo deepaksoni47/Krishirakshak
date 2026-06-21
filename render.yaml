@@ -1,0 +1,26 @@
+# render.yaml - Render.com Infrastructure as Code
+# Deploy this file in the root of your repo for one-click deployment
+
+services:
+  - type: web
+    name: krishirakshak-backend
+    runtime: python
+    rootDir: .
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: GEMINI_API_KEY
+        sync: false  # Set in Render dashboard
+      - key: OPENWEATHER_API_KEY
+        sync: false  # Set in Render dashboard
+      - key: LANGSMITH_API_KEY
+        sync: false  # Set in Render dashboard (optional)
+      - key: LANGSMITH_PROJECT
+        value: KrishiRakshak
+      - key: LANGSMITH_TRACING
+        value: "false"  # Enable only if you want tracing
+      - key: PORT
+        value: 10000

@@ -1,0 +1,36 @@
+SCHEME: PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)
+TYPE: Direct Income Support
+MINISTRY: Ministry of Agriculture & Farmers Welfare
+LAUNCH YEAR: 2019
+
+DESCRIPTION:
+PM-KISAN provides income support of INR 6,000 per year in three equal installments of INR 2,000 directly to farmers' bank accounts. The scheme helps farmers meet their agricultural input costs and household expenses. This direct benefit transfer (DBT) helps small and marginal farmers cover costs of seeds, fertilizers, and crop protection chemicals.
+
+BENEFITS:
+- INR 6,000 per year (INR 2,000 every 4 months) directly to bank account
+- No intermediaries; direct bank transfer (DBT)
+- Helps cover seed costs, pesticide, fungicide purchase costs
+- 12 crore+ farmer families already benefiting
+- Fund useful for purchasing crop disease treatment chemicals
+
+ELIGIBILITY:
+- All landholding farmer families across India are eligible
+- Excludes institutional landholders; former/serving government employees above certain income; income tax payers
+- Small and marginal farmers (land up to 2 hectares) are primary beneficiaries
+- Sharecroppers and tenant farmers: check state-specific provisions
+
+APPLICATION PROCESS:
+1. Register on pmkisan.gov.in portal
+2. Submit Aadhaar, bank account (linked to Aadhaar), and land records
+3. Local patwari (village accountant) verifies land ownership records
+4. After verification, funds transferred to registered bank account
+5. Check beneficiary status at pmkisan.gov.in/web/guest/beneficiarystatus
+
+STATUS CHECK: pmkisan.gov.in → Farmers Corner → Beneficiary Status
+
+BEST SUITED FOR:
+- Small and marginal farmers facing financial stress from crop treatment costs
+- Farmers with treatment costs between INR 200–500
+- Farmers needing immediate financial support for input purchase
+
+KEYWORDS: income support, financial aid, direct transfer, small farmer, marginal farmer, seed cost, pesticide cost, treatment support

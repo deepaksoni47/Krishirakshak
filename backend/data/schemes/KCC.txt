@@ -1,0 +1,42 @@
+SCHEME: Kisan Credit Card (KCC)
+TYPE: Agricultural Credit / Financial Support
+MINISTRY: Ministry of Agriculture & Farmers Welfare / RBI / NABARD
+LAUNCH YEAR: 1998
+
+DESCRIPTION:
+The Kisan Credit Card (KCC) scheme provides farmers with affordable, timely, and adequate credit support for their agricultural and allied activities. It is a revolving credit facility with a flexible repayment schedule based on harvesting and marketing period. In 2020, the scheme was extended to fishermen and animal husbandry farmers as well.
+
+BENEFITS:
+- Credit limit based on land holding, crop pattern, and scale of finance
+- Flexible repayment: repay after harvest season without penalty
+- Single credit facility for all farm needs: inputs, maintenance, post-harvest, consumption
+- Interest subvention: government subsidizes interest to reduce rates to 4% per annum
+- Crop insurance coverage included automatically under PMFBY
+- Personal accident insurance up to INR 50,000 for accidental death/permanent disability
+- Coverage up to INR 3 lakh at 4% p.a. for short-term crop loans
+- ATM-enabled card for easy fund access
+
+ELIGIBILITY:
+- All individual or joint borrower farmers who are owner-cultivators
+- Tenant farmers, oral lessees, and sharecroppers
+- Self Help Groups (SHGs) or Joint Liability Groups (JLGs) of farmers
+- No minimum land ownership requirement for animal husbandry and fisheries
+
+CREDIT LIMIT:
+- Determined by Crop Cultivation Expenses + Post-harvest expenses + Maintenance of farm assets
+- Enhanced limit for allied activities like animal husbandry and fisheries
+- Revolving credit: once repaid, full limit available again next season
+
+APPLICATION PROCESS:
+1. Visit nearest bank branch (nationalized, cooperative, or regional rural bank)
+2. Submit application with Aadhaar, land records, passport photo, and bank account details
+3. Bank assessment of credit requirement
+4. KCC issued within 14 working days of complete application submission
+5. Card valid for 5 years, renewable annually
+
+BEST SUITED FOR:
+- Farmers needing credit to purchase seeds, fertilizers, pesticides, fungicides
+- Farmers with medium to high treatment costs (INR 300–800+)
+- Farmers requiring post-harvest credit
+
+KEYWORDS: credit, loan, kisan, financial support, treatment cost, fungicide, seeds, fertilizer, bank, interest subsidy

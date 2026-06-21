@@ -1,0 +1,40 @@
+SCHEME: Rashtriya Krishi Vikas Yojana (RKVY)
+TYPE: Agricultural Infrastructure & Development
+MINISTRY: Ministry of Agriculture & Farmers Welfare
+LAUNCH YEAR: 2007 (Restructured 2017 as RKVY-RAFTAAR)
+
+DESCRIPTION:
+RKVY (Rashtriya Krishi Vikas Yojana) is a centrally sponsored scheme that strengthens farmers' efforts to maximize agricultural production and productivity by supporting state governments in developing comprehensive plans for agriculture and allied sectors. RKVY-RAFTAAR focuses on innovation, agri-entrepreneurship, and value chain development.
+
+BENEFITS:
+- Funding for setting up farm machinery banks for custom hiring
+- Support for post-harvest storage infrastructure
+- Setting up soil testing labs and mobile soil testing units
+- Support for crop protection measures and Integrated Pest Management (IPM) centres
+- Grants for setting up demonstration plots of resistant crop varieties
+- Agricultural extension and farmer training programs
+- Drone technology support for precision agriculture and pesticide spraying
+- Cold storage and food processing infrastructure support
+
+ELIGIBILITY:
+- Individual farmers, farmer groups, FPOs (Farmer Producer Organizations)
+- Agricultural entrepreneurs and agri-startups
+- State agricultural universities and research institutions
+- Self-help groups engaged in agriculture
+
+APPLICATION PROCESS:
+1. Apply through State Department of Agriculture
+2. Project proposals submitted to State Level Sanctioning Committee (SLSC)
+3. SLSC reviews and forwards eligible proposals for funding
+4. Funding released in instalments upon meeting milestones
+
+AGRI-STARTUPS:
+- Agri-entrepreneurs can apply for grants up to INR 25 lakh under RKVY-RAFTAAR
+- Incubation support available through agricultural universities
+
+BEST SUITED FOR:
+- Farmers wanting precision spraying drones for disease management
+- Farmers groups seeking farm machinery for crop protection
+- Farmers needing training on disease-resistant varieties
+
+KEYWORDS: agricultural development, farm machinery, infrastructure, crop protection, integrated pest management, disease resistant varieties, drone spraying, extension

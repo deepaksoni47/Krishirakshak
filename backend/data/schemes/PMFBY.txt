@@ -1,0 +1,45 @@
+SCHEME: Pradhan Mantri Fasal Bima Yojana (PMFBY)
+TYPE: Crop Insurance
+MINISTRY: Ministry of Agriculture & Farmers Welfare
+LAUNCH YEAR: 2016
+
+DESCRIPTION:
+Pradhan Mantri Fasal Bima Yojana (PMFBY) is the flagship crop insurance scheme of the Government of India. It provides comprehensive risk coverage to farmers against crop failure due to natural calamities, pests, and diseases. The scheme replaces earlier schemes like NAIS and MNAIS.
+
+BENEFITS:
+- Financial support to farmers suffering crop loss/damage due to unforeseen events
+- Covers pre-sowing, mid-season, post-harvest losses
+- Low premium rates: 2% for Kharif crops, 1.5% for Rabi crops, 5% for commercial/horticulture crops
+- Use of technology (remote sensing, drones, smartphones) for fast claim settlement
+- No cap on government subsidy; balance premium paid by central and state government
+- Coverage for localized calamities like hailstorm, landslide, cloud burst
+
+ELIGIBILITY:
+- All farmers growing notified crops in notified areas are eligible
+- Both loanee and non-loanee farmers can enroll
+- Sharecroppers and tenant farmers are also eligible with proper land documentation
+- Valid for Kharif, Rabi, and commercial crop seasons
+
+COVERAGE:
+- All food grains and oilseed crops
+- Annual commercial and horticulture crops
+- Pre-sowing and post-harvest losses included
+
+APPLICATION PROCESS:
+1. Visit the nearest Common Service Centre (CSC) or bank branch
+2. Fill the PMFBY enrollment form with Aadhaar card, bank account details, land records
+3. Pay the applicable premium amount
+4. Obtain crop insurance certificate/receipt
+5. In case of loss, notify within 72 hours to bank, insurance company, or call 14447 (PMFBY helpline)
+
+CLAIM PROCESS:
+- Notify loss within 72 hours via helpline 14447 or bank
+- District level investigation conducted
+- Claims settled within 2 months of harvest
+
+BEST SUITED FOR:
+- Farmers with crops affected by disease, floods, drought, hailstorm
+- Farmers with High or Critical risk level
+- Farmers facing crop losses costing over INR 500 in treatment
+
+KEYWORDS: insurance, crop loss, disease, natural calamity, kharif, rabi, premium, coverage, protection
