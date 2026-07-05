@@ -151,10 +151,14 @@ def treatment_agent(state: AgentState) -> AgentState:
         - expected_recovery_days : int
         - intervention_priority  : str
     """
-    disease_name    = state.get("disease_name")
-    risk_level      = state.get("risk_level")
-    severity        = state.get("severity") or "Medium"
-    rain_probability = float(state.get("rain_probability") or 0)
+    import time
+    start_time = time.time()
+    case = state["farmer_case"]
+    
+    disease_name    = case.disease_analysis.disease_name
+    risk_level      = case.risk_assessment.risk_level
+    severity        = case.disease_analysis.severity or "Medium"
+    rain_probability = float(case.weather_analysis.rain_probability or 0)
 
     # 1. Fetch treatment record from knowledge base
     record = _get_treatment_record(disease_name)
@@ -184,23 +188,40 @@ def treatment_agent(state: AgentState) -> AgentState:
     current_path = list(state.get("workflow_path", []))
     current_path.append("Treatment Agent")
 
+    # Update FarmerCase sections
+    case.treatment_plan.treatment_plan = treatment_plan
+    case.treatment_plan.recommended_actions = recommended_actions
+    case.treatment_plan.action_timeline = action_timeline
+    case.treatment_plan.estimated_cost = estimated_cost
+    case.treatment_plan.expected_recovery_days = expected_recovery_days
+    case.treatment_plan.intervention_priority = intervention_priority
+    case.treatment_plan.result = {
+        "agent":                 "Treatment Agent",
+        "message":               f"Treatment plan generated for {disease_name or 'detected issue'}.",
+        "treatment_plan":        treatment_plan,
+        "recommended_actions":   recommended_actions,
+        "action_timeline":       action_timeline,
+        "estimated_cost":        estimated_cost,
+        "expected_recovery_days": expected_recovery_days,
+        "intervention_priority": intervention_priority
+    }
+    
+    # Record tracking details
+    if "Treatment Agent" not in case.executed_agents:
+        case.executed_agents.append("Treatment Agent")
+    duration = time.time() - start_time
+    case.execution_time_per_agent["Treatment Agent"] = duration
+    
+    # Log workflow history
+    case.log_workflow(
+        "Treatment Agent",
+        f"Generated weather-aware treatment plan. Cost: INR {estimated_cost}, Recovery: {expected_recovery_days} days"
+    )
+
     return {
         **state,
-        "treatment_plan":          treatment_plan,
-        "recommended_actions":     recommended_actions,
-        "action_timeline":         action_timeline,
-        "estimated_cost":          estimated_cost,
-        "expected_recovery_days":  expected_recovery_days,
-        "intervention_priority":   intervention_priority,
         "workflow_path":           current_path,
-        "result": {
-            "agent":                 "Treatment Agent",
-            "message":               f"Treatment plan generated for {disease_name or 'detected issue'}.",
-            "treatment_plan":        treatment_plan,
-            "recommended_actions":   recommended_actions,
-            "action_timeline":       action_timeline,
-            "estimated_cost":        estimated_cost,
-            "expected_recovery_days": expected_recovery_days,
-            "intervention_priority": intervention_priority
-        }
+        "farmer_case":             case
     }
+
+

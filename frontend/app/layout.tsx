@@ -15,6 +15,9 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "KrishiRakshak AI | Multi-Agent Climate-Adaptive Farming Advisor",
   description: "An agentic AI agriculture advisor designed to support crop disease detection, weather intelligence, risk assessment, and government scheme recommendations.",
+  icons: {
+    icon: "/logo.png"
+  },
   keywords: [
     "Agriculture AI",
     "Climate-Adaptive Farming",

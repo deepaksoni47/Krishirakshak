@@ -8,25 +8,26 @@ support score based on: disease, severity, risk level, treatment cost, and locat
 """
 import os
 from backend.graph.state import AgentState
+from backend.schemas.farmer_case import FarmerCase
 from backend.rag.retriever import retrieve_relevant_schemes
 
 
 # ---------------------------------------------------------------------------
 # Helper: extract key terms for RAG query
 # ---------------------------------------------------------------------------
-def _build_rag_query(state: AgentState) -> str:
+def _build_rag_query(case: FarmerCase) -> str:
     """
-    Build a descriptive query from current state for RAG retrieval.
+    Build a descriptive query from FarmerCase for RAG retrieval.
     Richer query = better semantic matches.
     """
     parts = []
 
-    disease   = state.get("disease_name") or "crop disease"
-    crop      = state.get("crop_name") or "crop"
-    risk      = state.get("risk_level") or "Medium"
-    severity  = state.get("severity") or "Medium"
-    cost      = state.get("estimated_cost") or 0
-    location  = state.get("location") or ""
+    disease   = case.disease_analysis.disease_name or "crop disease"
+    crop      = case.crop_details.crop_name or "crop"
+    risk      = case.risk_assessment.risk_level or "Medium"
+    severity  = case.disease_analysis.severity or "Medium"
+    cost      = case.treatment_plan.estimated_cost or 0
+    location  = case.farmer_info.location or ""
 
     parts.append(f"Farmer growing {crop} facing {disease} with {severity} severity and {risk} risk level.")
 
@@ -35,11 +36,11 @@ def _build_rag_query(state: AgentState) -> str:
     if cost and cost > 0:
         parts.append(f"Treatment cost approximately INR {cost}.")
 
-    rain = state.get("rain_probability") or 0
+    rain = case.weather_analysis.rain_probability or 0
     if rain >= 60:
         parts.append("Heavy rainfall expected. Irrigation and water management support needed.")
 
-    humidity = state.get("humidity") or 0
+    humidity = case.weather_analysis.humidity or 0
     if humidity >= 75:
         parts.append("High humidity creating fungal disease risk. Crop protection and insurance needed.")
 
@@ -57,12 +58,12 @@ def _build_rag_query(state: AgentState) -> str:
 # ---------------------------------------------------------------------------
 # Helper: generate personalized eligibility reason for each scheme
 # ---------------------------------------------------------------------------
-def _generate_reason(scheme_id: str, scheme_name: str, state: AgentState) -> str:
+def _generate_reason(scheme_id: str, scheme_name: str, case: FarmerCase) -> str:
     """Generate a farmer-friendly explanation of why this scheme is recommended."""
-    risk     = state.get("risk_level") or "Medium"
-    disease  = state.get("disease_name") or "crop disease"
-    cost     = state.get("estimated_cost") or 0
-    crop     = state.get("crop_name") or "your crop"
+    risk     = case.risk_assessment.risk_level or "Medium"
+    disease  = case.disease_analysis.disease_name or "crop disease"
+    cost     = case.treatment_plan.estimated_cost or 0
+    crop     = case.crop_details.crop_name or "your crop"
 
     reason_map = {
         "PMFBY": (
@@ -140,14 +141,14 @@ def _get_application_tip(scheme_id: str) -> str:
 # ---------------------------------------------------------------------------
 # Helper: compute financial support score
 # ---------------------------------------------------------------------------
-def _compute_financial_support_score(state: AgentState) -> int:
+def _compute_financial_support_score(case: FarmerCase) -> int:
     """
     Compute 0–100 financial support score based on how urgently
     the farmer needs government scheme support.
     """
     score = 0
 
-    risk_level = state.get("risk_level") or "Low"
+    risk_level = case.risk_assessment.risk_level or "Low"
     if risk_level == "Critical":
         score += 40
     elif risk_level == "High":
@@ -155,7 +156,7 @@ def _compute_financial_support_score(state: AgentState) -> int:
     elif risk_level == "Medium":
         score += 15
 
-    cost = state.get("estimated_cost") or 0
+    cost = case.treatment_plan.estimated_cost or 0
     if cost > 600:
         score += 25
     elif cost > 400:
@@ -163,13 +164,13 @@ def _compute_financial_support_score(state: AgentState) -> int:
     elif cost > 200:
         score += 10
 
-    severity = state.get("severity") or "Low"
+    severity = case.disease_analysis.severity or "Low"
     if severity == "High":
         score += 20
     elif severity == "Medium":
         score += 10
 
-    rain = state.get("rain_probability") or 0
+    rain = case.weather_analysis.rain_probability or 0
     if rain >= 70:
         score += 15
     elif rain >= 40:
@@ -189,8 +190,12 @@ def scheme_advisor_agent(state: AgentState) -> AgentState:
     generates personalised recommendations with eligibility reasons,
     computes financial support score, and updates workflow trace.
     """
-    # 1. Build rich RAG query from current state
-    rag_query = _build_rag_query(state)
+    import time
+    start_time = time.time()
+    case = state["farmer_case"]
+    
+    # 1. Build rich RAG query from current FarmerCase
+    rag_query = _build_rag_query(case)
 
     # 2. Retrieve top 4 relevant scheme documents
     retrieved = retrieve_relevant_schemes(rag_query, k=4)
@@ -210,29 +215,67 @@ def scheme_advisor_agent(state: AgentState) -> AgentState:
             "name":             scheme_name,
             "scheme_id":        scheme_id,
             "type":             scheme_type,
-            "reason":           _generate_reason(scheme_id, scheme_name, state),
+            "reason":           _generate_reason(scheme_id, scheme_name, case),
             "application_tip":  _get_application_tip(scheme_id),
             "relevance_score":  item.get("relevance_score", 0.0),
         })
 
     # 4. Financial support score
-    financial_support_score = _compute_financial_support_score(state)
+    financial_support_score = _compute_financial_support_score(case)
 
     # 5. Update workflow trace
     current_path = list(state.get("workflow_path", []))
     current_path.append("Scheme Advisor Agent")
 
-    return {
-        **state,
+    # Update FarmerCase sections
+    case.government_schemes.eligible_schemes = eligible_schemes
+    case.government_schemes.scheme_recommendations = scheme_recommendations
+    case.government_schemes.financial_support_score = financial_support_score
+    case.government_schemes.result = {
+        "agent":                  "Scheme Advisor Agent",
+        "message":                f"Found {len(scheme_recommendations)} relevant government schemes.",
         "eligible_schemes":       eligible_schemes,
         "scheme_recommendations": scheme_recommendations,
         "financial_support_score": financial_support_score,
-        "workflow_path":          current_path,
-        "result": {
-            "agent":                  "Scheme Advisor Agent",
-            "message":                f"Found {len(scheme_recommendations)} relevant government schemes.",
-            "eligible_schemes":       eligible_schemes,
-            "scheme_recommendations": scheme_recommendations,
-            "financial_support_score": financial_support_score,
-        }
     }
+    
+    # Record tracking details
+    if "Scheme Advisor Agent" not in case.executed_agents:
+        case.executed_agents.append("Scheme Advisor Agent")
+    duration = time.time() - start_time
+    case.execution_time_per_agent["Scheme Advisor Agent"] = duration
+    
+    # Log workflow history
+    case.log_workflow(
+        "Scheme Advisor Agent",
+        f"Found {len(scheme_recommendations)} matching schemes. Support Score: {financial_support_score}/100"
+    )
+
+    return {
+        **state,
+        "workflow_path":          current_path,
+        "farmer_case":            case
+    }
+
+def compute_skipped_agents(case: FarmerCase):
+    """
+    Computes which agents were planned but not executed,
+    as well as handling exclusive route decisions like Emergency/Monitoring.
+    """
+    planned = case.planned_agents or []
+    executed = case.executed_agents or []
+    
+    skipped = [a for a in planned if a not in executed]
+    
+    # Check conditional decision choices
+    if "Risk Assessment Agent" in executed:
+        if "Emergency Agent" in executed and "Monitoring Agent" not in executed:
+            if "Monitoring Agent" not in skipped:
+                skipped.append("Monitoring Agent")
+        elif "Monitoring Agent" in executed and "Emergency Agent" not in executed:
+            if "Emergency Agent" not in skipped:
+                skipped.append("Emergency Agent")
+                
+    case.skipped_agents = list(set(skipped))
+
+

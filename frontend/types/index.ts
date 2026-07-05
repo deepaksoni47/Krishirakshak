@@ -63,6 +63,28 @@ export interface AnalyzeResponse {
     message: string;
     [key: string]: any;
   };
+  // Phase 8: Clarification fields
+  status?: string;
+  questions?: string[] | null;
+  workflow_status?: string;
+  // Phase 9: Critic fields
+  critic_status?: string;
+  cautious_recommendation?: string;
+  critic_issues?: any[] | null;
+  // Phase 10: Explainable Risk fields
+  risk_confidence?: number;
+  top_risk_drivers?: string[];
+  risk_factor_breakdown?: any[];
+  risk_reasoning_summary?: string;
+  // Phase 11: Case Memory & Monitoring fields
+  case_id?: string;
+  is_follow_up?: boolean;
+  progress_assessment?: string;
+  previous_risk_score?: number;
+  current_risk_score?: number;
+  escalation_required?: boolean;
+  follow_up_recommended?: boolean;
+  next_follow_up_guidance?: string;
 }
 
 export type AgentNodeStatus = 'idle' | 'running' | 'completed' | 'failed';

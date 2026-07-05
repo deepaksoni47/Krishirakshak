@@ -112,7 +112,7 @@ export default function WorkflowVisualizer({
   isRunning 
 }: WorkflowVisualizerProps) {
   return (
-    <div className="w-full py-6 px-4 bg-card/40 backdrop-blur-md rounded-2xl border border-border/80 shadow-lg">
+    <div className="w-full py-6 px-4 bg-white/40 dark:bg-white/[0.03] backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-2xl rounded-2xl">
       <div className="flex flex-col gap-1 mb-6">
         <h3 className="text-lg font-semibold tracking-tight font-heading text-primary">
           Agent Execution Pipeline

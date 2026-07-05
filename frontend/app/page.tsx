@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import DemoSection from '@/components/demo';
 import { 
   ShieldAlert, 
@@ -9,27 +11,32 @@ import {
   ArrowRight, 
   Cpu, 
   Network,
-  Globe
+  Globe,
+  Menu,
+  X
 } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen flex flex-col relative overflow-hidden bg-background">
-      {/* Background glow effects */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-emerald-950/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 left-1/3 w-[450px] h-[450px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
-
-      {/* Grid Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] pointer-events-none [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+      {/* Background Snippet from bg.ibelick.com (Grid + Masked Glow) */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        {/* The Grid lines adapt to light mode (#f0f0f0) vs dark mode (#4f4f4f2e) */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:6rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+        
+        {/* Soft radial glow centered at the top */}
+        <div className="absolute inset-x-0 top-0 h-[500px] bg-[radial-gradient(circle_500px_at_50%_0px,rgba(16,185,129,0.08),transparent)] dark:bg-[radial-gradient(circle_500px_at_50%_0px,rgba(16,185,129,0.15),transparent)]" />
+      </div>
 
       {/* Navigation Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/75 backdrop-blur-md">
+      <header className="sticky top-0 z-50 w-full border-b border-white/10 dark:border-white/5 bg-white/40 dark:bg-white/[0.02] backdrop-blur-xl shadow-sm">
         <div className="max-w-7xl mx-auto h-16 flex items-center justify-between px-4 md:px-8">
           <div className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center shadow-[0_0_12px_rgba(74,222,128,0.3)]">
-              <Sprout className="w-5 h-5 text-primary-foreground" />
+            <div className="w-9 h-9 rounded-lg bg-white/10 dark:bg-white/5 border border-white/15 dark:border-white/10 flex items-center justify-center overflow-hidden shadow-md">
+              <img src="/logo.png" alt="KrishiRakshak AI Logo" className="w-full h-full object-cover" />
             </div>
             <div>
               <span className="font-heading font-extrabold text-base tracking-tight text-foreground">
@@ -41,7 +48,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
+          {/* Desktop Navigation Links */}
+          <div className="hidden md:flex items-center gap-6">
             <Link 
               href="#features-section" 
               className="text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors"
@@ -50,18 +58,55 @@ export default function Home() {
             </Link>
             <Link 
               href="#demo-section" 
-              className="text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors"
+              className="inline-flex items-center justify-center h-9 px-4 rounded-lg bg-primary text-primary-foreground text-xs font-semibold hover:bg-primary/95 shadow-md shadow-primary/5 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5 transition-all duration-200"
             >
               Check My Crop
             </Link>
           </div>
+
+          {/* Mobile Menu Toggle Button */}
+          <button 
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition-all shrink-0"
+            aria-label="Toggle Menu"
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
         </div>
+
+        {/* Mobile Menu Drawer */}
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t border-border/40 bg-background/95 backdrop-blur-xl animate-fade-in absolute w-full left-0 py-4 px-6 flex flex-col gap-4 shadow-xl">
+            <Link 
+              href="#features-section" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors py-2 border-b border-border/20"
+            >
+              How It Helps
+            </Link>
+            <Link 
+              href="#demo-section" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-sm font-semibold text-primary hover:text-primary/80 transition-colors py-2"
+            >
+              Check My Crop
+            </Link>
+          </div>
+        )}
       </header>
 
       {/* Main Content */}
       <main className="flex-1">
         {/* 1. Hero Section */}
         <section className="relative pt-20 pb-16 md:pt-28 md:pb-24 max-w-7xl mx-auto px-4 md:px-8 text-center flex flex-col items-center">
+          {/* Hero Logo Element */}
+          <div className="relative w-20 h-20 mb-6 rounded-2xl overflow-hidden shadow-2xl border border-white/25 dark:border-white/10 p-1 bg-white/10 dark:bg-white/[0.03] backdrop-blur-md animate-fade-in">
+            <div className="w-full h-full rounded-xl overflow-hidden bg-background flex items-center justify-center">
+              <img src="/logo.png" alt="KrishiRakshak AI Hero Logo" className="object-cover w-full h-full" />
+            </div>
+          </div>
+
           {/* SDG Aligned Badge */}
           <div className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold text-emerald-500 bg-emerald-500/10 border border-emerald-500/20 rounded-full mb-6 tracking-wide animate-fade-in">
             <Globe className="w-3.5 h-3.5" />
@@ -181,8 +226,14 @@ export default function Home() {
         </section>
 
         {/* 3. Demo Section */}
-        <section className="relative">
-          <DemoSection />
+        <section className="relative py-12">
+          {/* Glassmorphic backdrop glow spots directly behind form & report */}
+          <div className="absolute top-1/4 left-[15%] w-80 h-80 rounded-full bg-emerald-500/10 dark:bg-emerald-500/15 blur-[100px] pointer-events-none z-0" />
+          <div className="absolute bottom-1/4 right-[15%] w-96 h-96 rounded-full bg-teal-500/10 dark:bg-teal-500/10 blur-[120px] pointer-events-none z-0" />
+          
+          <div className="relative z-10">
+            <DemoSection />
+          </div>
         </section>
       </main>
 
@@ -190,7 +241,7 @@ export default function Home() {
       <footer className="border-t border-border/40 py-8 bg-background relative z-10">
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center">
           <div className="flex items-center gap-2">
-            <Sprout className="w-4 h-4 text-primary" />
+            <img src="/logo.png" alt="KrishiRakshak AI Logo" className="w-5.5 h-5.5 object-cover rounded" />
             <span className="text-xs font-bold text-foreground">
               KrishiRakshak <span className="text-primary font-bold">AI</span>
             </span>
